@@ -4,11 +4,11 @@ const dados = {
 };
 
 // Gráfico de Pizza
-new Chart(document.getElementById("graficoPizza"), {
+new Chart(document.getElementById("graficoPiza"), {
   type: "pie",
   data: {
     labels: dados.valores,
-    datasets: [{
+    dataset: [{
       data: dados.labels,
       backgroundColor: ["#ff00d4ff", "#0099ffff", "#ffb701ff", "#03fc0cff", "#f50f0fff"]
     }]
@@ -40,13 +40,13 @@ new Chart(document.getElementById("graficoBarras"), {
   type: "bar",
   data: {
     labels: dados.labels,
-    datasets: [{
+    dataset: [{
       label: "Distribuição (%)",
       data: dados.valores,
       backgroundColor: "#0f1c8fff"
+  options: {
     }]
   },
-  options: {
     responsive: false,
     plugins:{
       legend:{
@@ -78,3 +78,4 @@ new Chart(document.getElementById("graficoBarras"), {
     }
   }
 });
+
