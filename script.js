@@ -26,7 +26,7 @@ new Chart(document.getElementById("graficoPiza"), {
           label: function (context) {
             let total = dados.valores.reduce((a, b) => a + b, 0);
             let valor = context.raw;
-            let porcentagem = ((valor / total) * 100).toFixed(1);
+            let porcentagem = ((valor / 100) * total).toFixed(1);
             return `${context.label}: ${porcentagem}%`;
           }
         }
@@ -44,8 +44,8 @@ new Chart(document.getElementById("graficoBarras"), {
       label: "Distribuição (%)",
       data: dados.valores,
       backgroundColor: "#0f1c8fff"
-  options: {
-    }]
+        options: {
+    }}]
   },
     responsive: false,
     plugins:{
@@ -69,13 +69,12 @@ new Chart(document.getElementById("graficoBarras"), {
       },
       x: {
           ticks:{
-            color:'#000000ff'
+            color:'#000000fff'
           },
           grid:{
             display: false,
           }
       }
     }
-  }
+  
 });
-
